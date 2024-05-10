@@ -33,6 +33,9 @@ app.use(cors(
     credentials: true
   }
 ));
+app.get("/", (req, res) => {
+  res.json("Hello")
+})
 app.use('/uploads', express.static('uploads'))
 app.post('/auth/login', loginValidation, handleValidationErrors, UserController.login)
 app.post('/auth/register', registerValidation, handleValidationErrors, UserController.register)
