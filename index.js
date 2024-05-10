@@ -28,7 +28,7 @@ const upload = multer({ storage });
 app.use(express.json())
 app.use(cors(
   {
-    origin: ['https://test-back-rho.vercel.app/'],
+    origin: [''],
     methods: ['POST', 'GET'],
     credentials: true
   }
