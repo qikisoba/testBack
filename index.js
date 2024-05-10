@@ -28,7 +28,7 @@ const upload = multer({ storage });
 app.use(express.json())
 app.use(cors(
   {
-    origin: ['https://gen-shortcuts.vercel.app/'],
+    origin: ['https://gen-shortcuts.vercel.app'],
     methods: ['POST', 'GET'],
     credentials: true
   }
