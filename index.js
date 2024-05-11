@@ -64,12 +64,20 @@
 // })
 
 
-// import express from "express"
-// "type": "module",
-const express = require('express')
-const app = express()
+import express from 'express'
+import cors from 'cors'
 
-app.use("/", (req, res) => {
-  res.send("Server is running.")
+const app = express();
+const port = process.env.PORT || 3000;
+app.use(express.json());
+// Enable CORS for all routes
+app.use(cors());
+app.get('/', (req, res) => {
+  res.send('Express server working!')
 })
-app.listen(3000, console.log(("Server started on PORT 3000")))
+app.get("/about", (req, res) => {
+    res.json({"message": "Welcome to the about page"})
+})
+app.listen(port, () => {
+    console.log("Sergeant we have a server on the loose...someone catch it");
+})
