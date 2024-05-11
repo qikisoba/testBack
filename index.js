@@ -63,6 +63,8 @@
 //   console.log("Server ОК")
 // })
 
+
+// "type": "module",
 import express from "express"
 const app = express()
 
